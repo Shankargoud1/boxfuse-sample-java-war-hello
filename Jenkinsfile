@@ -1,9 +1,8 @@
 pipeline{
     agent any
-    environment{
-        PATH = "/home/ec2-user/maven3.8.7/bin:$PATH"
-        }
-     
+    tools {
+        maven "Maven"
+    } 
     stages{
         stage("Git Checkout"){
             steps{
